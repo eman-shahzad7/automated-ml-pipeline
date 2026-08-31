@@ -51,7 +51,7 @@ Y = df['category']
 #LogisticRegression is a linear math classifier optimal for fast text classification sorting
 model = LogisticRegression()
 
-#.fit() exposes the model to the numbers (X) and answers(Y) so it can find historical links
+#.fit() exposes the model to the numbers (X) and answers (Y) so it can find historical links
 model.fit(X,Y)
 print("[System] Model training completed successfully.")
 
@@ -64,5 +64,5 @@ clean_email = new_email.strip().lower()
 vectorized_email = vectorizer.transform([clean_email])
 prediction = model.predict(vectorized_email)
 
-#Final string result showing which automated pipeline path the adta gets moved to
+#Final string result showing which automated pipeline path the data gets moved to
 print("[System] Process complete. Ticket was successfully routed to department:" , prediction)
